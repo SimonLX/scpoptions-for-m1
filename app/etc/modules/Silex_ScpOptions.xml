@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Silex_ScpOptions>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <OrganicInternet_SimpleConfigurableProducts/>
+            </depends>
+        </Silex_ScpOptions>
+    </modules>
+</config>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Silex_ScpOptions>
+            <version>1.0.0</version>
+        </Silex_ScpOptions>
+    </modules>
+    <global>
+        <models>
+            <silex_scpoptions>
+                <class>Silex_ScpOptions_Model</class>
+            </silex_scpoptions>
+            <catalog>
+                <rewrite>
+                    <product_type_simple>Silex_ScpOptions_Model_Catalog_Product_Type_Simple</product_type_simple>
+                </rewrite>
+            </catalog>
+        </models>
+    </global>
+    <frontend>
+        <events>
+            <sales_quote_item_set_product>
+                <observers>
+                    <add_parent_product_options_to_quote_item>
+                        <class>silex_scpoptions/observer</class>
+                        <method>addParentProductOptionsToQuoteItem</method>
+                    </add_parent_product_options_to_quote_item>
+                </observers>
+            </sales_quote_item_set_product>
+        </events>
+    </frontend>
+</config>
